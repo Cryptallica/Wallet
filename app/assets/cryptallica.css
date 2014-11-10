@@ -1,0 +1,976 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Oxygen';
+  font-style: normal;
+  font-weight: 300;
+  src: url('oxygen.woff2') format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+html {font-size: 16px;}
+
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+body{position: relative;z-index: 2;}
+
+#cryptWrap {
+	background: rgb(0,0,0);
+	position: absolute;
+	display: block;
+	height: 100%;
+	width: 100%;
+	overflow-x:hidden;
+	overflow-y: auto;
+}
+
+h1, h2, h3, h4, p, a, td, th, input {
+	font-family: "Oxygen", helvtica;
+	font-weight: 300;
+}
+
+input {
+	padding: 3px;
+	border-radius: 0;
+	border: 1px solid rgb(0,0,0);
+}
+
+input:focus {outline: none;}
+
+.none {display: none;}
+
+cred, cgreen {
+	padding: 3px;
+	margin: 2px 0;
+	display: inline-block;
+}
+
+cred {
+	background: rgb(255,50,50);
+	color: rgb(255,255,255);
+}
+
+cgreen {
+	background: rgb(0,180,0);
+	color: rgb(255,255,255);
+}
+
+.btBlue {color: rgb(150,150,255);}
+
+.opacityOn {display: block;}
+.opacityOff {display: none !important;}
+
+.sizeUp {-webkit-transform: scale(1);}
+
+.sizeDown {-webkit-transform: scale(.8);}
+
+
+/**************Main Screen**************/
+#cryptWrap hr {
+	border-color: rgb(200,200,200);
+}
+
+#cryptWrap a {
+	text-decoration: none;
+}
+
+#cryptWrap a:active {outline: none;}
+
+#cryptWrap button {
+	border: none;
+}
+
+#cryptMain {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	position: absolute;
+	top: 0;
+	background: rgb(0,0,0);
+	color: rgb(255,255,255);
+}
+
+#cryptMain > div {
+	position: relative;
+}
+
+#cryptMain button {
+	font-size: 1em;
+	padding: 5px;
+	background: rgb(0,0,0);
+	color: rgb(255,255,255);
+}
+
+#cryptMain input {
+	border: 1px solid rgb(0,0,0);
+}
+
+#cryptContent {
+	padding: 5px;
+	display: block;
+}
+
+#cryptContent > div {
+	position: relative;
+}
+
+#cryptHome > span {
+	width: 90%;
+	margin: 20px auto;
+	display: block;
+	background: rgb(60,60,60);
+	padding: 5px 10px 20px 10px;
+	max-width: 60em
+}
+
+#cryptHome > span > h2 {
+	text-align: center;
+	font-size: 2em;
+	margin: 5px 0 15px 0;
+	color: rgb(255,255,255);
+}
+
+#cryptCoinLogins > span {
+	display: inline-block;
+	position: relative;
+	clear: both;
+	margin: 2px 0;
+	padding: 5px 0;
+	background: rgb(200,200,200);
+	cursor: pointer;
+	width: 32.6%;
+	border-radius: 5px;
+}
+
+#cryptCoinLogins > span:nth-of-type(3n) {margin-right: 0;}
+
+#cryptCoinLogins > span:hover {background: rgb(230,230,230);}
+
+#cryptCoinLogins > span img {
+	width: 8em;
+	display: block;
+	padding: 0;
+	margin: 0 auto;
+	max-width: 90%;
+}
+
+#cryptCoinLogins > span > a {
+	display: block;
+	text-align: center;
+	top: 10px;
+	right: 10px;
+	font-size: 1.2em;
+	text-decoration: none;
+	color: rgb(60,0,60);
+}
+
+#cryptLogoutAll {
+	width: 90%;
+	margin: 5px auto 20px auto;
+	background: rgb(255,50,50);
+	color: rgb(255,255,255);
+	text-align: center;
+	border-radius: 5px;
+	padding: 2px 0;
+	display: block;
+	font-size: 2em;
+	text-decoration: none;
+}
+
+/*Prices*/
+#cryptCoinPricesData {
+	position: relative;
+	padding-top: 20px;
+	color: rgb(255,255,255);
+}
+
+#cryptCoinPricesData a {color: rgb(255,255,255);}
+
+#cryptCoinPricesData > a {
+	display: block;
+	position: absolute;
+	right: 5px;
+	top: -10px;
+	padding: 5px;
+	background: rgb(150,150,255);
+}
+
+#cryptCoinPricesData > a > img {
+	width: 3em;
+	display: block;
+}
+
+
+/**************Login Screen**************/
+#cryptLogin > a {
+	font-size: 2em;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	padding: 5px;
+	background: rgb(230,230,230);
+	color: rgb(0,0,0);
+}
+
+#cryptLoginCurrency{
+	display: block;
+	height: 50%;
+	padding: 20px 0;
+	background: rgb(50,50,50);
+}
+
+#cryptLoginCurrency > img {
+	display: block;
+	margin: 0 auto;
+	width: 200px;
+	max-width: 90%;
+}
+
+#cryptLogin > span {
+	display: block;
+	width: 80%;
+	max-width: 30em;
+	margin: 0 auto;
+	position: relative;
+	top: -60px;
+	background: rgb(230,230,230);
+	padding: 5px;
+	box-shadow: 0 0 25px -5px rgb(0,0,0);
+}
+
+#cryptLoginForm > h2 {
+	font-size: 2em;
+	margin: 0 0 15px 0;
+	color: rgb(0,0,0);
+}
+
+#cryptLoginForm > div {
+	padding: 5px;
+	background: rgb(50,50,50);
+	padding-left: 7em;
+	position: relative;
+	border-bottom: 1px solid rgb(0,0,0);
+}
+
+#cryptLoginForm > div > h3 {
+	position: absolute;
+	top: 9px;
+	margin: 0;
+	left: 5px;
+	font-size: 1em;
+	width: 7em;
+}
+
+#cryptLoginForm > div > input {
+	font-size: 1em;
+	display: block;
+	width: 100%;
+}
+
+#cryptLoginForm > button {
+	width: 100%;
+	padding: 5px;
+	border:none;
+	background: rgb(60,0,60);
+	color: rgb(255,255,255);
+}
+
+#cryptLoginError {
+	display: block;
+	margin: 0 0 10px 0;
+	color: rgb(255,50,50);
+	font-size: 1em;
+}
+
+#cryptLoginLoading {
+	position: absolute;
+	z-index: 4;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background: rgb(60,0,60);
+	background: rgba(60,0,60,.90);
+	text-align: center;
+	-webkit-transition: all .5s ease-in;
+	-moz-transition: all .5s ease-in;
+	-ms-transition: all .5s ease-in;
+}
+
+#cryptLoginLoading>h2 {
+	font-size: 3em;
+}
+
+#cryptLoginLoading>p {
+	font-size: 1em;
+	color: rgb(200,200,200);
+}
+
+.loading-bars{
+text-align:center;
+}
+.loading-container{
+display:table;
+width:100%;
+height:5em;
+min-height:45%;
+}
+.loader{
+margin:0 auto;
+text-align:center;
+width:100%;
+min-height:100%;
+display:table-cell;
+vertical-align:middle;
+opacity:0.4;
+}
+.loader:hover{
+opacity:1;
+}
+.bar{
+height:20px;
+width:10px;
+background:#FFF;
+display:inline-block;
+-webkit-animation:pulse 1.2s infinite ease-out;
+   -moz-animation:pulse 1.2s infinite ease-out;
+    -ms-animation:pulse 1.2s infinite ease-out;
+        animation:pulse 1.2s infinite ease-out;
+}
+.bar:nth-of-type(0n+1){
+-webkit-animation-delay:0s;
+   -moz-animation-delay:0s;
+    -ms-animation-delay:0s;
+        animation-delay:0s;
+}
+.bar:nth-of-type(0n+2){
+-webkit-animation-delay:0.2s;
+   -moz-animation-delay:0.2s;
+    -ms-animation-delay:0.2s;
+        animation-delay:0.2s;
+}
+.bar:nth-of-type(0n+3){
+-webkit-animation-delay:0.4s;
+   -moz-animation-delay:0.4s;
+    -ms-animation-delay:0.4s;
+        animation-delay:0.4s;
+}
+.bar:nth-of-type(0n+4){
+-webkit-animation-delay:0.6s;
+   -moz-animation-delay:0.6s;
+    -ms-animation-delay:0.6s;
+        animation-delay:0.6s;
+}
+.bar:nth-of-type(0n+5){
+-webkit-animation-delay:0.8s;
+   -moz-animation-delay:0.8s;
+    -ms-animation-delay:0.8s;
+        animation-delay:0.8s;
+}
+@-webkit-keyframes pulse{
+0% {
+    -webkit-transform: scale(1, 1);
+  }
+  25% {
+    -webkit-transform: scale(1, 3);
+  }
+}
+
+@-moz-keyframes pulse{
+0% {
+    -moz-transform: scale(1, 1);
+  }
+  25% {
+    -moz-transform: scale(1, 3);
+  }
+}
+
+@-ms-keyframes pulse{
+0% {
+    -ms-transform: scale(1, 1);
+  }
+  25% {
+    -ms-transform: scale(1, 3);
+  }
+}
+
+/**************Header**************/
+.cryptallicaKeys {
+	padding: 10px 5px;
+	display: block;
+	background: rgb(230,230,230);
+}
+
+.cryptallicaKeys > a {
+	font-size: 1.4em;
+	text-decoration: none;
+	color: rgb(100,0,100);
+	padding: 5px;
+	cursor: pointer;
+	-webkit-transition: background .4s ease-in;
+	-moz-transition: background .4s ease-in;
+	-ms-transition: background .4s ease-in;
+}
+
+.cryptallicaKeys > a:hover {
+	background: rgb(60,0,60);
+	color: rgb(255,255,255);
+}
+
+.cryptallicaKeys .selected {
+	border-bottom: 4px solid rgb(120,0,120);
+}
+
+.cryptallicaKeys > img {
+	width: 2.5em;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+}
+
+#cryptallicaCurrencies {
+	position: absolute;
+	right: 0;
+	top: 0;
+	padding: 5px 0;
+	z-index: 10;
+}
+
+#cryptallicaCurrencies > img {
+	width: 2.4em;
+	margin: 0 5px 5px 0;
+	display: block;
+	float: right;
+	cursor: pointer;
+	position: relative;
+}
+
+#cryptallicaCurrencies > div {
+	overflow: hidden;
+	position: absolute;
+	top: 3em;
+	right:0;
+	-webkit-transition: all .4s ease-in;
+	-moz-transition: all .4s ease-in;
+	-ms-transition: all .4s ease-in;
+}
+
+.heightOn {opacity:1;height: 40em;}
+.heightOff {height: 0px;opacity:.75;}
+
+#cryptallicaCurrencies > div > span {
+	display: block;
+	position: relative;
+	clear: both;
+	width: 13em;
+	height: 5em;
+	background: rgb(180,180,180);
+	border-bottom: 1px solid rgb(0,0,0);
+	border-left: 1px solid rgb(0,0,0);	
+	padding: 5px;
+	cursor: pointer;
+	box-shadow: -10px 0 25px -5px rgb(0,0,0);
+}
+
+#cryptallicaCurrencies > div > span:hover {
+	background: rgb(230,230,230);
+	z-index: 2;
+}
+
+#cryptallicaCurrencies > div > span:first-of-type {border-top: 1px solid rgb(0,0,0);}
+
+#cryptallicaCurrencies > div > span > a {
+	display: block;
+	padding: 10px;
+	font-size: 1.2em;
+	text-align: right;
+	position: absolute;
+	color: rgb(120,0,120);
+	top: 5px;
+	right: 5px;
+}
+
+#cryptallicaCurrencies > div > span > img {
+	float: left;
+	margin-right: 5px;
+	width: 5em;
+}
+
+/**************Globals**************/
+.BitcoinOmTable {
+	width: 90%;
+	margin: 0 auto;
+	border: 1px solid rgb(255,255,255);
+	background: rgb(230,230,230);
+	border-collapse: collapse;
+}
+
+.BitcoinOmTable th {
+	text-align: left;
+	padding: 3px;
+	font-size: 1em;
+	background: rgb(0,0,0);
+	border-left: 1px solid rgb(255,255,255);
+	color: rgb(255,255,255);
+}
+
+.BitcoinOmTable tr {
+	border-bottom: 1px solid rgb(180,180,180);
+}
+
+.BitcoinOmTable tr {background: rgb(80,80,80);}
+.BitcoinOmTable tr:nth-of-type(2n+1) {background:rgb(50,50,50);}
+
+.BitcoinOmTable td {
+	color: rgb(230,230,230);
+	padding: 3px;
+	font-size: 1em;
+}
+
+.BitcoinOmTable a {
+	color: rgb(150,150,255);
+	cursor: pointer;
+	display: block;
+}
+
+.BitcoinOmTable input {
+	font-size: 1em;
+}
+
+
+/**************Accounts**************/
+#crptAddNewAccount {
+	display: block;
+	width: 90%;
+	margin: 5px auto;
+	background: rgb(180,180,180);
+	color: rgb(0,0,0);
+	text-decoration: none;
+	font-size: 2em;
+	text-align: center;
+	border-radius: 5px;
+}
+
+
+/**************Coin home**************/
+#cryptCoinHomeKeys {
+	position: absolute;
+	top: 10px;
+	right: 5px;
+	background: rgb(200,200,200);
+	border-radius: 5px;
+}
+
+#cryptCoinHomeKeys > a {
+	display: inline-block;
+	float: left;
+	border-right: 1px solid rgb(0,0,0);
+	padding: 10px;
+}
+
+#cryptCoinHomeKeys > a:last-of-type {border: none;}
+
+#cryptCoinHomeKeys > a:hover {
+	background: rgb(230,230,230);
+}
+
+#cryptCoinHomeKeys > a.selected {background: rgb(150,150,255);}
+
+#cryptCoinHomeKeys > a > img {
+	width: 2em;	
+}
+
+#cryptCoinHomeDivs > div {
+	padding: 1em 0 0 0;
+}
+
+#cryptCoinHomeDivs > div > h2 {
+	margin: 0 0 1em 0;
+}
+
+#cryptWalletActions {
+	display: block;
+	width: 90%;
+	padding: 10px;
+	margin: 0 auto;
+	background: rgb(60,60,60);
+}
+
+#cryptWalletActions > a {
+	background: rgb(230,230,230);
+	border-left: 4px solid rgb(255,50,50);
+	color: rgb(255,50,50);
+	display: inline-block;
+	padding: 5px;
+}
+
+#cryptWalletActions > a > img {
+	width: 5em;
+}
+
+#cryptWalletActions > h2 {
+	font-size: 2em;
+}
+
+#cryptWalletKeys {
+	display: block;
+}
+
+#cryptWalletKeys > a {
+	display: inline-block;
+	background: rgb(0,0,0);
+	color: rgb(255,255,255);
+	padding: 5px;
+	font-size: 1.2em;
+	margin-bottom: 2px;
+	cursor: pointer;
+}
+
+#cryptWalletKeys > a:hover, #cryptWalletKeys > a.selected {
+	background: rgb(150,150,255);
+}
+
+#cryptWalletActions > div {
+	display: block;
+	padding: 10px;
+	background: rgb(200,200,200);
+	color: rgb(0,0,0);
+	width: 90%;
+	margin: 10px auto 0 auto;
+}
+
+#cryptWalletActions > div h3 {
+	margin: 0 0 10px 0;
+	font-size: 1.4em;
+}
+
+#cryptWalletActions > div input {
+	font-size: 1.2em;
+}
+
+#cryptWalletActions > div button {
+	display: block;
+	border: none;
+	font-size: 1.2em;
+	margin: 10px 0 0 0;
+}
+
+#cryptWalletResponses {
+	display: block;
+	padding: 10px;
+	margin: 0 auto;
+	width: 90%;
+	background: rgb(0,0,0);
+	font-size: 1em;
+}
+
+/**************Send**************/
+#BitcoinOmSend {
+	margin: 20px auto;
+	width: 90%;
+	background: rgb(230,230,230);
+	padding: 0 0 4em 0;
+}
+
+#BitcoinOmSend > h2 {
+	font-size: 2em;
+	text-align: center;
+	color: rgb(0,0,0);
+	margin: 0 0 20px 0;
+}
+
+#BitcoinOmSendAddress {
+	color: rgb(0,0,0);
+	width: 90%;
+	padding: 5px;
+	border: 1px solid rgb(180,180,180);
+	margin: 0 auto;
+}
+
+#BitcoinOmSendAddress p {
+	font-size: 1.2em;
+	padding: 5px 5px 5px 4.2em;
+	position: relative;
+	margin: 0 0 5px 0;
+}
+
+#BitcoinOmSendAddress p > span {
+	width: 4.2em;
+	position: absolute;
+	left: 0;
+	top: 8px;
+}
+
+#BitcoinOmSendAddress p > input {
+	width: 95%;
+	font-size: 1em;
+}
+
+#BitcoinOmSendBottom {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 3em;
+	background: rgb(0,0,0);
+}
+
+#BitcoinOmSendBottom button {
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	font-size: 1.4em;
+	border-radius: 0;
+	border: none;
+	background: rgb(150,150,255);
+	color: rgb(0,0,0);
+	text-align: center;
+	padding: 5px;
+}
+
+#cryptAddAddress {
+	display: block;
+	width: 90%;
+	margin: 5px auto;
+	background: rgb(60,0,60);
+	color: rgb(255,255,255);
+	border: 2px solid rgb(0,0,0);
+	text-decoration: none;
+	font-size: 2em;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.cryptCloseRed {
+	color: rgb(255,50,50);
+	border-left: 4px solid rgb(255,50,50);
+	padding: 5px;
+	cursor: pointer;
+	display: inline-block;
+	font-size:1em;
+}
+
+#cryptSendError {
+	color: rgb(255,50,50);
+}
+
+
+/**************Exports**************/
+#cryptTrans h2 a{
+	color: rgb(150,150,255);
+}
+
+#cryptExports > span {
+	width: 90%;
+	display: block;
+	margin: 10px auto 0 auto;
+	padding: 10px;
+	clear: both;
+	background: rgb(180,180,180);
+}
+
+#cryptExports > span > div {
+	clear: both;
+	color: rgb(255,255,255);
+	width: 90%;
+	margin: 10px auto;
+	border-radius: 5px;
+	position: relative;
+	background: rgb(50,50,50);
+	padding: 5px;
+}
+
+#cryptExports > span input {font-size:1em;}
+#cryptExports textarea {
+	display: block;
+	margin: 10px auto;
+	width: 70%;
+	padding: 5px;
+	height: 3em;
+	border-radius: 0;
+	border: 2px solid rgb(0,0,0);
+}
+
+#cryptExports > span > img {
+	float: left;
+	margin: 0 5px 10px 0;
+	width: 8em;
+}
+
+#cryptExports > span > h3 {
+	font-size: 2em;
+	color: rgb(0,0,0);
+}
+
+#cryptExports > span a {
+	font-size: 1em;
+	padding: 5px;
+	background: rgb(230,230,230);
+	color: rgb(50,50,255);
+	display: inline-block;
+	margin: 5px 0 0 0;
+	text-decoration: none;
+}
+
+#cryptQRCreateKeys .selected {
+	background: rgb(0,0,0);
+}
+
+#cryptWalletIOKeys .selected{
+	background: rgb(150,150,255);
+	color: rgb(255,255,255);
+}
+
+/**************QR Reader**************/
+#cryptQRKeys {
+	background: rgb(230,230,230);	
+	padding: 0;
+	height: 3.5em;
+	overflow: hidden;
+}
+
+#cryptQRKeys > span {
+	float: right;
+}
+
+#cryptQRKeys > span > a {
+	padding: 5px;
+	background: rgb(0,0,0);
+	border-left: 1px solid rgb(0,0,0);
+	display: block;
+	float: right;
+	-webkit-transition: all .5s ease-out;
+}
+
+#cryptQRKeys > span > a:hover, #cryptQRKeys .selected {
+	background: rgb(60,60,60);
+}
+
+#cryptQRKeys > span > a > img {
+	width: 3em;
+	opacity: .5;
+}
+
+#cryptQrReader {
+	background: rgb(60,60,60);
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+}
+
+#cryptCameraWrap {
+	width: 80%;
+	max-width: 500px;
+	margin: 0 auto;
+	padding-top: 1.5em;
+}
+
+#cryptCameraWindow {
+	display: block;
+	height: 350px;
+	margin: 0 auto;
+	position: relative;
+	background: rgb(230,230,230);
+	padding-top: 10px;
+	box-shadow: 0 0 25px -5px rgb(0,0,0);
+}
+
+#cryptCameraWindow > canvas {
+	display: none;
+}
+
+#cryptCameraWindow > video {
+	position: absolute;
+	top:10px;
+	left:0;
+	width: 100%;
+	height: 350px;
+}
+
+#cryptScanner {
+	background: rgb(0,0,0);
+	color: rgb(255,255,255);
+	display: block;
+	padding: 5px 0;
+	text-align: center;
+	font-size: 1.4em;
+	bottom: 0;
+}
+
+#cryptScannerMessage {
+	padding: 5px;
+	height: 2.5em;
+	border-top: 2px solid rgb(150,150,255);
+	background: rgb(0,0,0);
+	color: rgb(200,200,200);
+	position: absolute;
+	display: inline-block;
+	width: 100%;
+	overflow-x: auto;
+	left: 0;
+	bottom: 0;
+	font-size: 1em;
+	word-wrap: normal;
+}
+
+#cryptQRRescan {
+	display: block;
+	padding: 10px 0;
+	background: rgb(60,60,60);
+	height: 2em;
+	width: 100%;
+}
+
+#cryptQRRescan > img {
+	width: 2em;
+	display: block;
+	margin: 0 auto;
+}
+
+#cryptImportDiv {
+	width: 80%;
+	margin: 0 auto;
+	max-width: 500px;
+	position: relative;
+	padding-top: 1.5em;
+}
+
+#cryptImportDiv > canvas{
+	background: rgb(230,230,230);
+	width: 100%;
+	display: block;
+	position: absolute;
+	z-index: 0;
+	height: 350px;
+}
+
+#cryptImportDiv > span {
+	margin: 3em auto 0 auto;
+	width: 80%;
+	background: rgb(200,200,200);
+	border: 2px solid rgb(0,0,0);
+	display: block;
+	position: relative;
+	padding: 20px 10px;
+}
+
+/****************************Resize****************************/
+@media (max-width: 520px) {
+	#cryptallicaKeys > a  {font-size: 1em;}
+	
+	#cryptallicaCurrencies > img {
+		width: 2em;
+		top: -2px;	
+	}
+	
+	#cryptallicaCurrencies > div {top: 2.5em;}
+	
+	#cryptCoinHomeKeys > a > img {width: 1.2em;}
+	
+	#cryptCoinLogins > span > a {
+		font-size: 12px;
+	}
+	
+	#cryptCoinLogins > span {width: 32.4%;}
+}

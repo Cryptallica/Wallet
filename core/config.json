@@ -1,0 +1,25 @@
+{
+	"bitcoin": {
+		"port": 8332
+	},
+	
+	"litecoin": {
+		"port": 9332
+	},
+	
+	"dogecoin": {
+		"port": 22555
+	},
+	
+	"peercoin": {
+		"port": 9902
+	},
+	
+	"darkcoin": {
+		"port": 9332	
+	},
+	
+	"cannabiscoin": {
+		"port": 39347
+	}
+}
