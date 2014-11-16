@@ -10,9 +10,13 @@ foreach(["toaccount", "label", "amount", "message", "type"] as $field) {
 
 $crypt = new Cryptallica();
 
+if(isset($_GET["test"])) {
+    $crypt->createSendRequestTest();
+    exit;
+}
 
 if($_POST["type"] === "qr") {
-	$img_url = $crypt->createQR(
+	$img_url = $crypt->createRequestQr(
 		$_POST["toaccount"],
 		$_POST["amount"],
 		$_POST["label"],

@@ -1,25 +1,31 @@
 {
 	"bitcoin": {
+        "symbol": "BTC",
 		"port": 8332
 	},
 	
 	"litecoin": {
+	    "symbol": "LTC",
 		"port": 9332
 	},
-	
-	"dogecoin": {
-		"port": 22555
-	},
-	
-	"peercoin": {
-		"port": 9902
-	},
-	
-	"darkcoin": {
-		"port": 9332	
-	},
-	
-	"cannabiscoin": {
-		"port": 39347
-	}
+    
+    "dogecoin": {
+        "symbol": "DOGE",
+        "port": 22555
+    },
+    
+    "peercoin": {
+        "symbol": "PPC",
+        "port": 9902
+    },
+    
+    "darkcoin": {
+        "symbol": "DRK",
+        "port": 9332    
+    },
+    
+    "cannabiscoin": {
+        "symbol": "CANN",
+        "port": 39347
+    }
 }
